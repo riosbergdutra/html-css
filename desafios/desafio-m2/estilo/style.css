@@ -73,6 +73,7 @@ nav>a{
     text-decoration: none;
     font-weight: bold;
     transition-duration: .5s;
+    margin-bottom: 20px;
 }
 
 nav>a:hover{
