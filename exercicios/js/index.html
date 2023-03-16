@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento Web</title>
+    <style>
+        section{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.928);
+        }
+
+        h1,h2{
+            color: white;
+            text-align: center;
+        }
+        input{
+            padding: 10px;
+            border-radius: 5px;
+            display: inline block;
+            position: relative;
+    
+        }
+        .primeiro, .segundo{
+            padding: 9px;
+           margin-right: 2px;
+           margin-left: 2px;
+           border-radius: 5px;
+        }
+        .primeiro{
+            background-color: #10a97b;
+        }
+        .segundo{
+            background-color: #cc0000;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .primeiro:hover,.segundo:hover{
+            color: rgb(255, 255, 255);
+        }  
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Curso de Desenvolvimento Web</h1>
+        <h2 id="result"></h2>
+           <input placeholder="Seu nome" name="name" id="name" type="text">
+           <button class="primeiro" onclick="getValue()">entrar</button>
+           <button class="segundo" onclick="removeValue()">sair</button>
+    </section>
+   <script>
+
+    function getValue()
+{
+
+    var value = document.getElementById('name').value
+    document.getElementById('result').innerHTML = 'bem-vindo, ' + value + "!";
+}
+
+function removeValue()
+{
+    document.getElementById('name').value = "";
+    document.getElementById('result').innerHTML = '';
+}
+
+   </script>
+</body>
+</html>
